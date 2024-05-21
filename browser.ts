@@ -12,7 +12,7 @@ import {
   ReadyState
 } from "./types";
 
-export class WebSocket implements AgnosticWebSocket {
+export default class WebSocket implements AgnosticWebSocket {
   static readonly CONNECTING = ReadyState.CONNECTING;
   static readonly OPEN = ReadyState.OPEN;
   static readonly CLOSING = ReadyState.CLOSING;

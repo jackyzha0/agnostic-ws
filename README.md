@@ -7,6 +7,21 @@ behaviour between `ws` and the Brower's WebSocket
 this is a very thing comptability shim around both WebSockets that 
 satisfies a common subset of the two APIs
 
+## usage
+
+```bash
+npm i agnostic-ws
+```
+
+in code
+
+```ts
+import WebSocket from 'agnostic-ws';
+
+// your code that uses websockets
+```
+
+## definitions
 the type definition is as follows:
 
 ```ts
