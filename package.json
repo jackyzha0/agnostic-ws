@@ -1,6 +1,6 @@
 {
   "name": "agnostic-ws",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "description": "runtime-agnostic websocekts",
   "main": "dist/node.js",
