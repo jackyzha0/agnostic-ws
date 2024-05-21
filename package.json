@@ -6,8 +6,13 @@
   "main": "dist/node.js",
   "browser": "dist/browser.js",
   "scripts": {
-    "build": "rm -rf dist && tsup"
+    "build": "rm -rf dist && tsup && du -sh dist",
+    "prepack": "npm run build",
+    "release": "npm publish --access public"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Jacky Zhao",
   "license": "MIT",
   "devDependencies": {
