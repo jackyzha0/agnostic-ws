@@ -27,6 +27,10 @@ export default class WebSocket implements AgnosticWebSocket {
   onerror: ErrorHandler | null = null;
   onmessage: MessageHandler | null = null;
 
+  get rawInner(): NodeWebSocket {
+    return this.ws;
+  }
+
   send(data: BufferLike) {
     return this.ws.send(data);
   }

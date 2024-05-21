@@ -25,6 +25,10 @@ export default class WebSocket implements AgnosticWebSocket {
   onclose: CloseHandler | null = null;
   onerror: ErrorHandler | null = null;
   onmessage: MessageHandler | null = null;
+  
+  get rawInner(): globalThis.WebSocket {
+    return this.ws;
+  }
 
   send(data: BufferLike) {
     return this.ws.send(data);
