@@ -1,0 +1,21 @@
+{
+  "name": "agnostic-ws",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "runtime-agnostic websocekts",
+  "main": "dist/node.js",
+  "browser": "dist/browser.js",
+  "scripts": {
+    "build": "rm -rf dist && tsup"
+  },
+  "author": "Jacky Zhao",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "ws": "^8.13.0"
+  }
+}
