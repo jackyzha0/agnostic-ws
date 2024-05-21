@@ -79,14 +79,14 @@ export default class WebSocket implements AgnosticWebSocket {
     };
 
     this.ws.onmessage = (evt) => {
-      if (!(evt.data instanceof Buffer) && !(evt.data instanceof Uint8Array)) {
+      if (!(evt.data instanceof Buffer) && !(evt.data instanceof ArrayBuffer)) {
         throw new Error("Expected data to be a BufferLike");
       }
 
       const syntheticEvent: MessageEvent = {
         target: this,
         type: "message",
-        data: evt.data,
+        data: new Uint8Array(evt.data),
       };
 
       this.onmessage?.(syntheticEvent);
