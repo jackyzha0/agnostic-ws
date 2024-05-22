@@ -1,10 +1,18 @@
 {
   "name": "agnostic-ws",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
-  "description": "runtime-agnostic websocekts",
-  "main": "dist/node.js",
-  "browser": "dist/browser.js",
+  "description": "runtime-agnostic websockets",
+  "exports": {
+    "node": {
+      "import": "./dist/node.js",
+      "require": "./dist/node.cjs"
+    },
+    "default": {
+      "import": "./dist/browser.js",
+      "require": "./dist/browser.cjs"
+    }
+  },
   "scripts": {
     "build": "rm -rf dist && tsup && du -sh dist",
     "prepack": "npm run build",
